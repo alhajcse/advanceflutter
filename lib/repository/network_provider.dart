@@ -8,7 +8,9 @@ class MyApiProvider {
   Client client = Client();
 
   Future<UserInfo> fetchUserList() async {
+
     print("entered");
+
     final response = await client
         .get("http://dummy.restapiexample.com/api/v1/employees");
     print(response.body.toString());
